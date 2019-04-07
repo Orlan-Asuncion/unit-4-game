@@ -14,10 +14,11 @@
     margin: 10px;
     width: 200px;
     height: 200px;
+    transform: translate(5px 10px);
 }
 #boxshadow crystal{
     width: 100%;
-    border: 1px soli#8a4419;
+    border: 1px solid#8a4419;
    
 }
 h1{

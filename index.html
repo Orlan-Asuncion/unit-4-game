@@ -13,54 +13,42 @@
 <body>
     <div class ="container">
      <h1> Crystals Collector!</h1>  
-    <div class="card-body"> 
      <h2>Rules of the Game</h2>   
      <p> You will be given a random number at the start of the game.There are four crystals below. By clicking on a crystal you will add a specific amount of points to our total score.   You win the game by matching your score to random number, 
         you lose the game if your total score goes above the random number.</p>   
      <p>The value of each crystal is hidden from you until you click on it. Each time when the game starts, the game will change the values of each crystal.</p>  
-    <br>
+   
+   
+    <div class="card-body">Random Result:<span id='yourScore'>0</span></div>
+    <div class="card-body">Wins:<span id='yourScore'>0</span></div>
+    <div class="card-body">Losses:<span id='yourScore'>0</span></div>
     
-     <h5>Random Result</h5>
-     <h5>Wins</h5>
-     <h5>Losses</h5>
+    <div class="row">
+    <div class="col-sm-3 float-left"id="imgBtn1">
+     <button class="Btn" id="Btn1">
+        <img class="crystal" id="image1" src="assets/images/Crystal-body-1.jpg"> 
+     </button>
     </div>
-    <div class="buttons">       
-    <img class="crystal" id="image1" src="assets/images/Crystal-body-1.jpg">
-     <img class="crystal" id="image2" src="assets/images/kinetic-crystal-2.jpg">
-     <img class="crystal" id="image3" src="assets/images/Kyber-Crystal-3.jpg">
-     <img class="crystal" id="image4" src="assets/images/Big-bang-gravitational-4.jpg">
+    <div class="col-sm-3 float-left"id="imgBtn1">
+        <button class="Btn" id="Btn1">
+           <img class="crystal" id="image2" src="assets/images/kinetic-crystal-2.jpg">
+        </button>
+    </div>
+    <div class="col-sm-3 float-left"id="imgBtn1">
+        <button class="Btn" id="Btn1">
+           <img class="crystal" id="image3" src="assets/images/Kyber-Crystal-3.jpg">
+        </button>
+    </div>
+    <div class="col-sm-3 float-left"id="imgBtn1">
+        <button class="Btn" id="Btn1">
+           <img class="crystal" id="image4" src="assets/images/Big-bang-gravitational-4.jpg">
+        </button>
+    </div>   
+    </div>
+    <div class="card-body">Total Score:<span id='yourScore'>0</span></div>
+    <div class="card-body">Score:<span id='yourScore'>0</span></div>  
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--<div class="crystal-image">
-      <div class="row">
-              <div class="col-sm-3"></div><img src="assets/images/Crystal_body.jpg" class="float-left thumbnail" alt="..."></div>
-
-               <div class="col-sm-3"><img src="assets/images/Kyber_Crystal.jpg" class="float-left thumbnail" alt="..."></div>
-
-               <div class="col-sm-3"><img src="assets/images/kinetic_crystal.jpg" class="float-left thumbnail" alt="..."></div>
-
-               <div class="col-sm-3"><img src="assets/images/Big-bang-gravitational.jpg"class="float-left thumbnail" alt="..."></div>                                             
-    </div>        
-    </div>-->
-    <div class="card-body">Your Total Score:<span id='yourScore'>0</span></div>
-    <div class="card-body">Your Score:<span id='yourScore'>0</spa></div>  
-
-    </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
