@@ -1,69 +1,76 @@
-alert("connected");
+//alert("connected");//
 //initiialize variables//
-$(document).ready(function(){
-var RandomNumber;
+
+var randomNumber;
 var Wins;
 var Losses;
-var TotalScore ;
+var TotalScore=0 ;
 var image1RanNum;
 var image2RanNum;
 var image3RanNum;
 var iamge4RanNum;
-
+$(document).ready(function(){
+    console.log(Math.random());
 function generateRandomNumber(min,max) {
     //Math.floor(Math.random() * (maxNumber - minNumber) + minNumber) returns a random integer number between minNumber and maxNumber both inclusive.
     //The random number shown at the start of the game should be between 19 - 120
-    rand = Math.floor(Math.random() * (120 - 19) + 19 ); 
+    var rand = Math.floor(Math.random() * (100 - 19)  )+ 19; 
     return rand;
 }
 
 
-
-$('randumNumber').text(Random);
+  startGame(); 
 function startGame(){
+    randomNumber = generateRandomNumber();
+
+    console.log(randomNumber);
+    $('#random').text(randomNumber);
+
+
+
     //pick any random number between 19 - 120
-    RandomNumber=Math.floor(Math.random() * 11 + 1);
-    console.log("Random Nummber is: "+RandomNumber);
-    $('#ranNum').text(RandomNummber);
+    // RandomNumber=Math.floor(Math.random() * 11 + 1);
+    // console.log("Random Nummber is: "+RandomNumber);
+    // $('#ranNum').text(RandomNummber);
 
     //***get random number of image1***//
-    image1=Math.floor(Math.random() * 11 +1);
-    console.log("image 1 Redandom Number is: "+image1RanNum);
+    image1RanNum=Math.floor(Math.random() * 11 +1);
+    console.log("image 1 Random Number is: "+image1RanNum);
 
-    image2=Math.floor(Math.random() * 11 + 1) ;
-    console.log("image 1 Redandom Number is: "+image2RanNum);
+    image2RanNum=Math.floor(Math.random() * 11 + 1) ;
+    console.log("image 2 Random Number is: "+image2RanNum);
 
-    image3=Math.floor(Math.random() * 11 + 1);
-    console.log("image 3 Redandom Number is: "+image3RanNum);
+    image3RanNum=Math.floor(Math.random() * 11 + 1);
+    console.log("image 3 Random Number is: "+image3RanNum);
 
-    image4=Math.floor(Math.random() * 11 + 1);
-    console.log("image 4 Redandom Number is: "+image4RanNum);
+    image4RanNum=Math.floor(Math.random() * 11 + 1);
+    console.log("image 4 Random Number is: "+image4RanNum);
    
 }
     //*** keep adding and display numbers to total score when a crystal button is pressed***//
     $('#imgBtn1').click(function(){
-        $('#totScore').text(image1RanNum);
+        $('#total-score').text(image1RanNum);
         TotalScore=TotalScore+image1RanNum;
-        $('#totScore').text(TotalScore);
+        $('#total-score').text(TotalScore);
         win_loss();
     })
     
     $('#imgBtn2').click(function(){
-        $('#totScore').text(image2RanNum);
+        $('#total-score').text(image2RanNum);
         TotalScore=TotalScore + image2RanNum;
-        $('#totScore').text(TotalScore);
+        $('#total-score').text(TotalScore);
         win_loss();
     })
     $('#imgBtn3').click(function(){
-        $('#totScore').text(image3RanNum);
+        $('#total-score').text(image3RanNum);
         TotalScore=TotalScore + image3RanNum;
-        $('#totScore').text(TotalScore);
+        $('#total-score').text(TotalScore);
         win_loss();
     })
     $('#imgBtn4').click(function(){
-        $('#totScore').text(image4RanNum);
+        $('#total-score').text(image4RanNum);
         TotalScore=TotalScore + image4RanNum;
-        $('#totScore').text(TotalScore);
+        $('#total-score').text(TotalScore);
         win_loss();
             
     
@@ -74,10 +81,10 @@ function startGame(){
     //*** verify-if toltal score is equals to or random number then player  wins and if its more the the random number then player looses.***//
     function win_loss()
     {
-       if(TotalScore === RandomNumber)
+       if(TotalScore === randomNumber)
        {
     
-            $('#wonMsg').text("-You Won!"); 
+            $('#win').text("-You Won!"); 
             Wins++;
             $('#addWin').text(Wins); 
             playAgain();
@@ -88,12 +95,12 @@ function startGame(){
            
             
        }
-       else if(TotalScore > RandomNumber) 
+       else if(TotalScore > randomNumber) 
        {
     
-            $('#lostMsg').text("-You Lose!"); 
+            $('#lose').text("-You Lose!"); 
             Losses++;
-            $('#addLost').text(Losses); 
+            $('#addLose').text(Losses); 
             playAgain();
             $('#totScore').text('0'); 
             setTimeout(function() {
