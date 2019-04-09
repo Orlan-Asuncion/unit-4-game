@@ -53,6 +53,7 @@ function startGame(){
         TotalScore=TotalScore+image1RanNum;
         $('#total-score').text(TotalScore);
         win_loss();
+        
     })
     
     $('#imgBtn2').click(function(){

@@ -14,12 +14,18 @@
     margin: 10px;
     width: 200px;
     height: 200px;
-    transform: translate(5px 10px);
+      
+}
+.crystal:hover{
+    box-shadow: 15px 15px 15px rgbs(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: box-shadow 1s;
 }
 #boxshadow crystal{
     width: 100%;
     border: 1px solid#8a4419;
-   
+   box-shadow:5px 5px 5x rgba(0,0,0,0.5);
+
 }
 h1{
     text-align: center;
