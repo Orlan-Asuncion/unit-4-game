@@ -8,12 +8,12 @@
 .crystal{
     display: inline-flex;
     justify-content: space-around;    
-    border: 1px solid #8a4419;
+    border: 1px solid #8a4419;system: 
     border-radius: 4px;
-    padding: 30px; 
+    padding: 5px; 
     margin: 10px;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
       
 }
 .crystal:hover{
